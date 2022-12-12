@@ -2,7 +2,7 @@
   "name": "fast-form",
   "version": "1.0.0",
   "description": "Librería minimalista que te provee un hook de Reactjs 'useMinForm' para el manejo de formularios.",
-  "main": "src",
+  "main": "useMinForm.js",
   "keywords": [
     "react",
     "form",
