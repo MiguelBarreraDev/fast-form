@@ -1,0 +1,23 @@
+{
+  "name": "fast-form",
+  "version": "1.0.0",
+  "description": "Librería minimalista que te provee un hook de Reactjs 'useMinForm' para el manejo de formularios.",
+  "main": "src",
+  "keywords": [
+    "react",
+    "form",
+    "hooks"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MiguelBarreraDev/fast-form"
+  },
+  "author": {
+    "name": "Miguel Barrera",
+    "email": "barrera.dev23@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
