@@ -40,21 +40,22 @@ export default function useMinForm ({ defaultValues = {}, defaultErrors } = {}) 
    * params {String} name - Key to register a input element
    */
   const getAttributes = (name) => {
-    if (!errors[name] && errors[name] !== '') {
-      setErrors((cs) => ({ ...cs, [name]: '' }))
-    }
-
-    if (!values[name] && values[name] !== '') {
-      setValues((cs) => ({ ...cs, [name]: '' }))
-    }
-
     const attributes = {
       onChange: (e) => handleChange(name, e),
       name,
       value: values[name] ?? '',
       error: Boolean(errors[name]),
       helperText: errors[name] ?? '',
-      onBlur: handleErrors
+      onBlur: handleErrors,
+      ref: () => {
+        if (!errors[name] && errors[name] !== '') {
+          setErrors((cs) => ({ ...cs, [name]: '' }))
+        }
+
+        if (!values[name] && values[name] !== '') {
+          setValues((cs) => ({ ...cs, [name]: '' }))
+        }
+      }
     }
 
     return attributes
